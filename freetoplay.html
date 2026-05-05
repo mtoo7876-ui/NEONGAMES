@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Arena — Your Ultimate Gaming Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+    <div class="blob red"></div>
+    <div class="blob green"></div>
+    <!-- === NAVBAR === -->
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">NEON<span>ARENA</span></a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="games.html" class="active">Games</a>
+        <a href="cart.html">Cart</a>
+        <a href="community.html">Community</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="login.html" class="btn-login">Login</a>
+        <a href="register.html" class="btn-register">Register</a>
+        <button class="btn-register" id="theme-toggle">Change theme</button>
+      </div>
+
+<div
+          id="user-profile"
+          style="display: none; align-items: center; gap: 15px"
+        >
+          <span style="color: white"
+            >Hello,
+            <span
+              id="display-username"
+              style="color: #00ff88; font-weight: bold"
+            ></span
+          ></span>
+          <button
+            id="logout-btn"
+            class="btn-register"
+            style="
+              background: transparent;
+              border: 1px solid #ff4b4b;
+              color: #ff4b4b;
+            "
+          >
+            Logout
+          </button>
+        </div>
+
+    </nav>
+
+    <!--hero section-->
+    <main>
+      <section class="page-header">
+        <h1>Free To Play Games</h1>
+        <p>Start your adventure today without paying a cent.</p>
+      </section>
+
+      <section class="games-grid">
+        <article class="game-item">
+          <div class="game-img-container">
+            <img src="img/WhatsApp Image 2026-05-05 at 6.32.49 PM.jpeg" alt="Valorant" />
+          </div>
+          <div class="game-info">
+            <h3>Valorant</h3>
+            <p>Tactical 5v5 character-based shooter.</p>
+            <button class="play-btn" onclick="logGame('Valorant')">
+              Add to cart
+            </button>
+          </div>
+        </article>
+
+        <article class="game-item">
+          <div class="game-img-container">
+            <img src="img/WhatsApp Image 2026-05-05 at 6.32.511 PM.jpeg" alt="Fortnite" />
+          </div>
+          <div class="game-info">
+            <h3>Fortnite</h3>
+            <p>The ultimate Battle Royale experience.</p>
+            <button class="play-btn" onclick="logGame('Fortnite')">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <article class="game-item">
+          <div class="game-img-container">
+            <img src="img/WhatsApp Image 2026-05-05 at 6.32.491 PM.jpeg" alt="Rocket League" />
+          </div>
+          <div class="game-info">
+            <h3>Rocket League</h3>
+            <p>High-powered hybrid of arcade soccer.</p>
+            <button class="play-btn" onclick="logGame('Rocket League')">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+      </section>
+
+      <section class="media-container">
+        <div class="video-box">
+          <h2>Featured Trailer</h2>
+          <video controls autoplay muted loop width="100%">
+            <source src="img\WhatsApp Video 2026-05-05 at 6.34.34 PM.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+
+      <section class="table-container">
+        <h2>System Requirements Comparison</h2>
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Game Name</th>
+              <th>Min. RAM</th>
+              <th>Storage</th>
+              <th>GPU Required</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Valorant</td>
+              <td>4 GB</td>
+              <td>30 GB</td>
+              <td>Intel HD 4000</td>
+            </tr>
+            <tr>
+              <td>Fortnite</td>
+              <td>8 GB</td>
+              <td>26 GB</td>
+              <td>Intel HD 4000</td>
+            </tr>
+            <tr>
+              <td>Rocket League</td>
+              <td>4 GB</td>
+              <td>20 GB</td>
+              <td>NVIDIA GTX 760</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- === FOOTER === -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-logo">NEON<span>GAMES</span></a>
+            <p class="footer-desc">
+              Your ultimate destination for online gaming. Discover, play, and
+              connect with gamers worldwide.
+            </p>
+            <div class="footer-social">
+              <a href="#" title="Twitter">&#120143;</a>
+              <a href="#" title="Discord"><img src="img\logo.png" /></a>
+              <a href="#" title="YouTube"><img src="img\youtube (1).png" /></a>
+              <a href="#" title="Twitch"><img src="img\twitch.png" /></a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer-title">Platform</h4>
+            <ul class="footer-links">
+              <li><a href="catalog.html">Games Catalog</a></li>
+              <li><a href="cart.html">cart</a></li>
+              <li><a href="#">Top Charts</a></li>
+              <li><a href="#">New Releases</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-title">Community</h4>
+            <ul class="footer-links">
+              <li><a href="community.html">Feed</a></li>
+              <li><a href="#">Forums</a></li>
+              <li><a href="#">Tournaments</a></li>
+              <li><a href="#">Leaderboards</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-title">Support</h4>
+            <ul class="footer-links">
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2025 Nexus Games. All rights reserved. Built with passion for
+          gamers.
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

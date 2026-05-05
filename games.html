@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Arena — Your Ultimate Gaming Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+    <div class="blob red"></div>
+    <div class="blob green"></div>
+    <!-- === NAVBAR === -->
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">NEON<span>ARENA</span></a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="games.html" class="active">Games</a>
+          <a href="cart.html">Cart</a>
+          <a href="community.html">Community</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <a href="login.html" class="btn-login">Login</a>
+            <a href="register.html" class="btn-register">Register</a>
+            <button class="btn-register" id="theme-toggle">Change theme</button>
+          </div>
+          
+ <div
+          id="user-profile"
+          style="display: none; align-items: center; gap: 15px"
+        >
+          <span style="color: white"
+            >Hello,
+            <span
+              id="display-username"
+              style="color: #00ff88; font-weight: bold"
+            ></span
+          ></span>
+          <button
+            id="logout-btn"
+            class="btn-register"
+            style="
+              background: transparent;
+              border: 1px solid #ff4b4b;
+              color: #ff4b4b;
+            "
+          >
+            Logout
+          </button>
+        </div>
+
+    </nav>
+
+    <div class="categories-bar">
+      <a href="#souls-section">Souls</a>
+      <a href="#multiplayer-section">Multiplayer</a>
+      <a href="#action-section">Action</a>
+      <a href="freetoplay.html">Free to play</a>
+    </div>
+
+    <div class="search-container">
+      <input
+        type="text"
+        id="gameSearch"
+        placeholder="Search for a game..."
+        onkeyup="filterGames()"
+      />
+    </div>
+
+    <div id="games-page-content">
+      <section id="souls-section" class="category-group">
+        <div class="category-header">
+          <h2>SOULS GAMES</h2>
+        </div>
+        <div class="games-list">
+          <div class="card">
+            <img src="img/bloodborne-mpz5ky_2560x1600.png" alt="" />
+            <h3>Bloodborne</h3>
+            <p class="price"><del>$50.00</del> $30.00</p>
+            <button
+              id="btn-4"
+              class="add-btn"
+              onclick="togglecart(4, 'Bloodborne', 30, 'img/bloodborne-mpz5ky_2560x1600.png', this)"
+            >
+              Add to cart
+            </button>
+          </div>
+
+          <div class="card">
+            <img src="img/Elden Ring-6o6p3q_1920x1200.png" />
+            <h3>Elden Ring</h3>
+            <p class="price">$60.00</p>
+            <button
+              id="btn-3"
+              class="add-btn"
+              onclick="togglecart(3, 'Elden Ring', 60, 'img/Elden Ring-6o6p3q_1920x1200.png', this)"
+            >
+              Add to cart
+            </button>
+          </div>
+
+          <div class="card">
+            <img src="img/Sekiro-eymdmk_1920x1080.png" alt="" />
+            <h3>Sekiro</h3>
+            <p class="price">$40.00</p>
+            <button
+              id="btn-5"
+              class="add-btn"
+              onclick="togglecart(5, 'Sekiro', 40, 'img/Sekiro-eymdmk_1920x1080.png', this)"
+            >
+              Add to cart
+            </button>
+          </div>
+
+          <div class="card">
+            <img src="img/Dark souls 3-r729l1_1920x1080.png" alt="" />
+            <h3>Dark souls 3</h3>
+            <p class="price">$25.00</p>
+            <button
+              id="btn-6"
+              class="add-btn"
+              onclick="togglecart(6, 'Dark souls 3', 25, 'img/Dark souls 3-r729l1_1920x1080.png', this)"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="multiplayer-section" class="category-group">
+        <div class="category-header">
+          <h2>MULTIPLAYER GAMES</h2>
+        </div>
+        <div class="games-list">
+          <div class="card">
+            <img src="img/FC 26-21ddzm_1920x1080.png" />
+            <h3>FC 26</h3>
+            <p class="price"><del>$70.00</del> $50.00</p>
+            <button
+              id="btn-2"
+              class="add-btn"
+              onclick="togglecart(2, 'FC 26', 50, 'img/FC 26-21ddzm_1920x1080.png', this)"
+            >
+              Add to cart
+            </button>
+          </div>
+
+          <div class="card">
+            <img src="img/wallhaven-0jgqqm_1920x1080.png" alt="" />
+            <h3>Minecraft</h3>
+            <p class="price">$10.00</p>
+            <button
+              id="btn-7"
+              class="add-btn"
+              onclick="togglecart(7, 'Minecraft', 10, 'img/wallhaven-0jgqqm_1920x1080.png', this)"
+            >
+              Add to cart
+            </button>
+          </div>
+
+          <div class="card">
+            <img src="img/Call of duty-x1xdjl_1920x1080.png" alt="" />
+            <h3>Call of duty:black ops 7</h3>
+            <p class="price"><del>$80.00</del> $60.00</p>
+            <button
+              id="btn-8"
+              class="add-btn"
+              onclick="
+                togglecart(8, 'Call of duty:black ops 7', 60, 'img/Call of duty-x1xdjl_1920x1080.png', this)
+              "
+            >
+              Add to cart
+            </button>
+          </div>
+
+          <div class="card">
+            <img src="img/WWE2k26-x1vwgd_1920x1080.png" alt="" />
+            <h3>WWE2k26</h3>
+            <p class="price">$55.00</p>
+            <button
+              id="btn-9"
+              class="add-btn"
+              onclick="togglecart(9, 'WWE2k26', 55, 'img/WWE2k26-x1vwgd_1920x1080.png', this)"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="action-section" class="category-group">
+        <div class="category-header">
+          <h2>ACTION GAMES</h2>
+        </div>
+
+        <div class="games-list">
+          <div class="card">
+            <img src="img/GTA V-2eg6mg_1920x1080.png" />
+            <h3>GTA V</h3>
+            <p class="price">$60.00</p>
+            <button
+              id="btn-1"
+              class="add-btn"
+              onclick="togglecart(1, 'GTA V', 60, 'img/GTA V-2eg6mg_1920x1080.png', this)"
+            >
+              Add to cart
+            </button>
+          </div>
+
+          <div class="card">
+            <img src="img/wallhaven-lmlmvy_3840x2160.png" alt="" />
+            <h3>Ghost of Tsushima</h3>
+            <p class="price">$45.00</p>
+            <button
+              id="btn-10"
+              class="add-btn"
+              onclick="
+                togglecart(10, 'Ghost of Tsushima', 45, 'img/wallhaven-lmlmvy_3840x2160.png', this)
+              "
+            >
+              Add to cart
+            </button>
+          </div>
+
+          <div class="card">
+            <img src="img/Uncharted 4-vmvmv8_1920x1080.png" alt="" />
+            <h3>Uncharted 4</h3>
+            <p class="price">$35.00</p>
+            <button
+              id="btn-11"
+              class="add-btn"
+              onclick="togglecart(11, 'Uncharted 4', 35, 'img/Uncharted 4-vmvmv8_1920x1080.png', this)"
+            >
+              Add to cart
+            </button>
+          </div>
+
+          <div class="card">
+            <img src="img/Red Dead Redemption 2-2k91oy_1920x1080.png" alt="" />
+            <h3>Red Dead Redemption 2</h3>
+            <p class="price">$50.00</p>
+            <button
+              id="btn-12"
+              class="add-btn"
+              onclick="
+                togglecart(12, 'Red Dead Redemption 2', 50, 'img/Red Dead Redemption 2-2k91oy_1920x1080.png', this)
+              "
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+         <!-- === FOOTER === -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-logo">NEON<span>GAMES</span></a>
+            <p class="footer-desc">
+              Your ultimate destination for online gaming. Discover, play, and
+              connect with gamers worldwide.
+            </p>
+            <div class="footer-social">
+              <a href="#" title="Twitter">&#120143;</a>
+              <a href="#" title="Discord"><img src="img\logo.png"/></a>
+              <a href="#" title="YouTube"><img src="img\youtube (1).png"/></a>
+              <a href="#" title="Twitch"><img src="img\twitch.png"/></a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer-title">Platform</h4>
+            <ul class="footer-links">
+              <li><a href="catalog.html">Games Catalog</a></li>
+              <li><a href="cart.html">cart</a></li>
+              <li><a href="#">Top Charts</a></li>
+              <li><a href="#">New Releases</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-title">Community</h4>
+            <ul class="footer-links">
+              <li><a href="community.html">Feed</a></li>
+              <li><a href="#">Forums</a></li>
+              <li><a href="#">Tournaments</a></li>
+              <li><a href="#">Leaderboards</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-title">Support</h4>
+            <ul class="footer-links">
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2025 Nexus Games. All rights reserved. Built with passion for
+          gamers.
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
